@@ -1,2 +1,3 @@
-# software
-开发软件包主要提供给linux系统
+# autobuild-centos7
+基于centos7的自动构建系统
+
