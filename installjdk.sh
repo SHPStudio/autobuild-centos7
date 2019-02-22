@@ -18,6 +18,10 @@ function isexist()
 echo "jdk未安装... 安装jdk"
 cd /usr/local
 mkdir /devsoft >/dev/null 2>&1
+if [ ! -d "/usr/local/devsoft" ];then
+  mkdir -p "/usr/local/devsoft"
+fi
+
 cd devsoft
 if [ ! -f "/usr/local/devsoft/jdk-8u201-linux-x64.tar.gz" ];then
    echo "无jdk包...开始下载.."

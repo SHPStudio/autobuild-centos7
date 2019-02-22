@@ -1,17 +1,17 @@
 #!/bin/bash
 checkyumsoft() {
-  list_all_installed=`yum list installed`
-  if [[ $list_all_installed=~$1 ]]
+  list_all_installed=`yum list installed | grep "^$1."`
+  if [[ ! -z $list_all_installed ]]
     then
        echo "已安装$1...."
   else
     echo "没有安装$1 ... 开始安装$1 ..."
     yum install -y $1
     if [ $? -ne 0 ];then
-      echo "done"
+      echo "安装$1...失败"
+      exit 1
     else
-      echo "安装$1 ... 失败"
-      exit 0
+      echo "done"
     fi
   fi
 

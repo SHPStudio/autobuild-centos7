@@ -16,7 +16,7 @@ if [ ! -d "$docker_build_path" ];then
  echo "创建docker构建路径"
  mkdir -p "$docker_build_path"
 fi
-if [ ! -f "$docker_build_path" ];then
+if [ ! -f "$docker_build_path/Dockerfile" ];then
  echo "创建Dockerfile"
  mv ~/autobuild/Dockerfile $docker_build_path/Dockerfile
 fi
