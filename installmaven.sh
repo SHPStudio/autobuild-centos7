@@ -20,7 +20,7 @@ mkdir /devsoft >/dev/null 2>&1
 cd devsoft
 if [ ! -f "/usr/local/devsoft/apache-maven-3.3.9-bin.tar.gz" ];then
    echo "无maven包...开始下载.."
-   wget "https://link.jianshu.com/?t=http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" -O apache-maven-3.3.9-bin.tar.gz
+   wget "http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" -O apache-maven-3.3.9-bin.tar.gz
 fi
 if [ ! -d "/usr/local/devsoft/apache-maven-3.3.9" ];then
  tar -zxvf apache-maven-3.3.9-bin.tar.gz
